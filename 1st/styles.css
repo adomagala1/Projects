@@ -11,6 +11,11 @@
   padding-left: 11%;
   padding-left: 8%;
   position: relative;
+
+  background-image: url(images/photo.png);
+  background-size: 38%;
+  background-position: 92% 100%;
+  background-repeat: no-repeat;
 }
 .top-nav {
   display: flex;
@@ -43,7 +48,7 @@
 }
 .side-nav {
   position: fixed;
-  background: #e91e63;
+  /* background: #e91e63; */
   left: 0;
   top: 0;
   width: 100px;
@@ -53,4 +58,44 @@
   align-items: center;
   flex-direction: column;
   padding: 50px 0;
+  background: linear-gradient(#00bcd4, #e91e63, #3f51b5, #00bcd4);
+  background-size: 100% 500%;
+  background-position: 0 40%;
 }
+.side-nav:hover {
+  animation: backcolor 15s linear infinite reverse;
+}
+@keyframes backcolor {
+  0% {
+    background-position: 0 0%;
+  }
+  100% {
+    background-position: 0 500%;
+  }
+}
+.side-nav .lgo {
+  width: 60px;
+  cursor: pointer;
+}
+.side-nav a {
+  text-decoration: none;
+  color: #fff;
+  transform: rotate(-90deg) translateX(60%);
+  width: max-content;
+}
+.text-box {
+  margin-top: 20%;
+  font-size: 18px;
+  color: #fff;
+  height: auto;
+  text-wrap: wrap;
+  overflow: visible;
+}
+.text-box h1 {
+  font-weight: 500;
+  font-size: 86px;
+  max-width: 550px;
+  line-height: 10px;
+  margin-bottom: 30px;
+}
+/* TODO:REMOVE THE OVERFLOWING TEXT PROBLEM */
